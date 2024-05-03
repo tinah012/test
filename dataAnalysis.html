@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<style>
+.row {
+	padding: 12px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+#table1, .figureLabel {
+    text-align: left;
+    font-style: italic;
+}
+#footer {
+    text-align: center;
+    font-size: 15px;
+    color: #1144A6;
+}
+.blueText {
+	color: #1144A6;
+}
+#foot {
+    background-color: #d9e3f5;
+}
+
+</style>
+</head>
+<body> 
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+					<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+			    		<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>  
+					</li>
+	    			<li class="nav-item active">
+						<a class="nav-link" href="dataAnalysis.html">Data Analysis <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="conclusion.html">Conclusion <span class="sr-only">(current)</span></a>
+					</li>
+					</ul>
+				</nav>	
+			</div>
+		</div>
+        <div class="row">
+            <div class="col-md-12">
+				<h1 class="blueText">Data Description</h1>
+                <p>After collecting 50 responses from second-year or older McGill students, we organized the data on an Excel sheet and created scatter plots, histograms, and bar graphs to examine any correlations. This page will cover correlation, distribution, and hypothesis testing analysis. The table below represents each Quantitative Independent Variable's measures of location and dispersion:</p><br>
+                <img src="images/table1.png" width="980" height="370" class="center" alt="Quantitative Variable Measures of Dispersion Table">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <br>
+            </div>
+            <div class="col-md-8">
+                <p id="table1">Note: The Highschool Average column displays percentage ranges instead of average percentages. Numbers 1-5 were assigned to increasing-order average ranges to maintain the data within our calculations. For example, 1 represented the lowest range our data contained: 75-79% and 4 represented the highest: 95-100%.</p>
+            </div>
+            <div class="col-md-2">
+                <br>
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="blueText">Distribution</h2>
+                <p>The table above indicates that each quantitative independent variable is skewed to a certain degree. For example, the highschool average data revealed the most negative skew of approximately -0.9480, resulting in a more pronounced left tail as illustrated in Figure 1. Data for the average sleeping hours per week displayed the least amount of skewness with approximately a -0.1812 out of all the independent variables. As a result, Figure 2 imitates an almost bell-shaped curve that normally distributed histograms possess.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <img src="images/histogram1.png" width="550" height="300" alt="Figure 1">
+                <p class="figureLabel">Figure 1: Note that numbers 1-5 on the x-axis represent each of the following average ranges: 75-79%, 80-84%, 85-89%, 90-94%, 95-100%.</p>
+            </div>
+            <div class="col-md-1">
+                <br>
+            </div>
+            <div class="col-md-6">
+                <img src="images/histogram2.png" width="570" height="300" alt="Figure 2">
+                <p class="figureLabel">Figure 2</p>
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="blueText">Correlation</h2>
+                <p>The relationship between student highschool averages vs. first-year GPA has the strongest correlation of approximately r = 0.452. The positive r value demonstrates an increasing trend as illustrated in Figure 1. In general terms, students with higher highschool averages are associated with higher GPA scores. Some independent variables have negative coefficients of correlation such as daily cups of coffee, hours of extracurriculars per week, and number of skipped lectures per week. A negative r value demonstrates a decreasing trend, thus, revealing the negative relationship associated with lower GPA scores as illustrated in Figure 2, Figure 3, and Figure 4. For example, students who skipped a higher number of lectures per week are associated with lower GPA scores. The relationship between hours of sleep vs. first-year GPA had the weakest correlation of approximately r = -0.01. Despite knowing each variable’s trend direction, almost all correlation coefficients derived from our data have negligible magnitudes for linear regression. As a result, each independent variable’s coefficient of determination will be similarly low, thus, impacting how we run our regression model.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="images/graph1.png" width="520" height="330" alt="Figure 3"><br>
+                <p class="figureLabel">Figure 3: Coefficient of correlation: 0.452</p>
+            </div>
+            <div class="col-md-4">
+                <img src="images/graph2.png" width="520" height="330" alt="Figure 4"><br>
+                <p class="figureLabel">Figure 4: Coefficient of correlation:  -0.091</p>
+            </div>
+            <div class="col-md-4">
+                <img src="images/graph3.png" width="520" height="330" alt="Figure 5"><br>
+                <p class="figureLabel">Figure 5: Coefficient of correlation:  -0.023</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="images/graph4.png" width="520" height="330" alt="Figure 6"><br>
+                <p class="figureLabel">Figure 6: Coefficient of correlation:  -0.010</p> 
+            </div>
+            <div class="col-md-4">
+                <img src="images/graph5.png" width="520" height="330" alt="Figure 7"><br>
+                <p class="figureLabel">Figure 7: Coefficient of correlation: 0.093</p> 
+            </div>
+            <div class="col-md-4">
+                <br>
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="blueText">Hypothesis Testing</h2>
+                <p>The analyses on our data revealed the independent variables that have the strongest relationships with first year student’s GPA score are daily average of hours studying, high school average, and weekly average of missed lectures. The remaining independent variables yielded very weak coefficients of correlation, which were not informative enough for us to generate meaningful hypotheses. Thus, we hypothesized the following: As hours of studying increases, GPA score increases; As high school average increases, GPA score increases; As number of skipped lectures increase, GPA score decreases. After conducting hypothesis tests on each of our speculations, we determined whether they were statistically significant, prompting our choice to reject or fail to reject them. We used the multiple regression table provided by Excel to determine whether to reject or fail to reject the null hypothesis.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-7">
+                <img src="images/table2.png" width="880" height="450" alt="Multiple Regression Analysis Table"> <!--ask prof why it's being overlapped-->
+            </div>
+            <div class="col-md-5">
+                <div class="alert alert-secondary" role="alert">Please note that we will be comparing at the 5% significant level.</div>
+                <ol>
+                    <li>The hypothesis test for the correlation between average hours of studying per week and GPA generated a p-value of 0.987. Since this p-value &gt; 5% significance level, we fail to reject our null hypothesis, which insinuated that average hours of studying per week would not have significant statistical predictive value on GPA.</li><br>
+                    <li>The hypothesis test for the correlation between high school average and GPA generated a p-value of 0.00189. Since this p-value &lt; 5% significance level, we reject our null hypothesis, which postulated that average hours of studying per week has significant statistical predictive value on GPA.</li><br>
+                    <li>The hypothesis test for the correlation between weekly missed lectures and GPA generated a p-value of 0.233. Since this P value &gt; 5% significance level, we fail to reject our null hypothesis, which suggested that average hours of studying per week would not have a significant statistical predictive value on GPA.</li><br>
+                </ol>
+            </div>
+        </div><br>
+        <div class="row">
+            <div class="col-md-7">
+                <h2 class="blueText">Biases and Outliers</h2>
+                <p>GPA outliers are found outside the range Q1 - 1.5IQR to Q3 + 1.5IQR, where Q1 is the 25th percentile and IQR is the interquartile range. Figure 8 reveals the boxplot values below the minimum of 3.0 GPA, with GPAs of 2.5 to 2.6. Our form did not include a data validation constraint for GPA input, which allowed the above outliers to occur.</p>
+                <p>Certain biases should be noted, for example, there are programs that have objectively more difficult courses than others, meanwhile some have bounded grading such as the Desautels faculty. External factors such as the Desautels grade curving may impact our findings from students of this population. The current Desautels grading policy is to maintain a class average between 65% (B-) and 77.5% (B+).</p>
+                <p>To inspect whether the Desautels grading policy held influence over our sample, we calculated the GPA average for all our Desautels participants. The average was approximately 3.3 which by McGill conversion policies, means a 75-79% average overall. The observational average lies within and slightly above Desautels bounded grading policy, demonstrating the mixed factors that contribute to succeeding above the curve. For example, first-year U0 students are restricted to a maximum of 3-4 management core classes and must find electives for their remaining schedule. As a result, many students desire taking “bird-classes”, which are commonly known to boost one’s GPA. First-year U1 students, however, tend to take more management core classes since they graduate one year before U0 students do. Therefore, U1 Desautels students are more subjective to the grading curve than U0 ones, thus, explaining the slight variance in our sample average with McGill’s grading policy average.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="images/boxplot.png" width="470" height="480" alt="Figure 8">
+                <p class="figureLabel">Figure 8</p>
+            </div>
+        </div><br>
+        <div class="row" id="foot">
+            <div class="col-md-12">
+                <p id="footer">MGCR 331 Assignment by Tina, Phoebe, and Sally</p>
+            </div>
+        </div>
+	</div>
+</body>
+</html>
